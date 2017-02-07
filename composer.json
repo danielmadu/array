@@ -1,12 +1,15 @@
 {
     "name": "phpol/array",
-    "description": "PHP Object Library - Array Manipulation Component",
     "type": "library",
-    "license": "MIT",
-    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "Daniel Madureira",
+            "email": "daniel.madureira.batista@gmail.com"
+        }
+    ],
     "autoload": {
-        "psr-4": {
-            "OL\\Array\\": "src/"
+        "psr-0": {
+            "OL\\Array": "src/"
         }
     },
     "require": {}
