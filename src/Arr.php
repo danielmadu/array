@@ -28,6 +28,6 @@ class Arr implements ArrContract
      */
     public function map($callback)
     {
-        return new Arr(array_map($callback, $this))
+        return new Arr(array_map($callback, $this->contents));
     }
 }
