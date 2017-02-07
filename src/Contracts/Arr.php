@@ -6,7 +6,6 @@ interface Arr
 {
     public function __construct(array $array);
 
-
     /**
      * Replaces one or more parts of the string with a given value.
      *
@@ -14,6 +13,5 @@ interface Arr
      *
      * @return Array
      */
-    public function map(callback $callback);
-
+    public function map(callable $callback);
 }

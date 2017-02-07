@@ -24,9 +24,9 @@ class Arr implements ArrContract
     /**
      * Execute a function on each array element
      *
-     * @return array
+     * @return Array
      */
-    public function map($callback)
+    public function map(callable $callback)
     {
         return new Arr(array_map($callback, $this->contents));
     }
