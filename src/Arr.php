@@ -1,10 +1,10 @@
 <?php
 
-namespace OL\Array;
+namespace OL\Arr;
 
-use OL\Array\Contracts\Array as ArrayContract;
+use OL\Arr\Contracts\Arr as ArrContract;
 
-class Array
+class Arr implements ArrContract
 {
     /**
      * @var string Contents.
@@ -28,6 +28,6 @@ class Array
      */
     public function map($callback)
     {
-        return new Array(array_map($callback, $this))
+        return new Arr(array_map($callback, $this))
     }
 }

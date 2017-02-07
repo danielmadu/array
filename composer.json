@@ -8,8 +8,8 @@
         }
     ],
     "autoload": {
-        "psr-0": {
-            "OL\\Array": "src/"
+        "psr-4": {
+            "OL\\Arr\\": "src/"
         }
     },
     "require": {}

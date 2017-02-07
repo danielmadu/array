@@ -1,8 +1,8 @@
 <?php
 
-namespace OL\Array\Contracts;
+namespace OL\Arr\Contracts;
 
-interface Array
+interface Arr
 {
     public function __construct(array $array);
 

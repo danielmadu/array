@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use OL\Array;
+use OL\Arr;
 
-$array = new Array([1,2,3]);
+$array = new Arr([1,2,3]);
 print_r($array);
