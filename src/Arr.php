@@ -7,14 +7,14 @@ use OL\Arr\Contracts\Arr as ArrContract;
 class Arr implements ArrContract
 {
     /**
-     * @var string Contents.
+     * @var array Contents.
      */
     protected $contents;
 
     /**
      * Str constructor.
      *
-     * @param string $string The string to build from.
+     * @param array The array to build from.
      */
     public function __construct(array $array)
     {
@@ -24,6 +24,7 @@ class Arr implements ArrContract
     /**
      * Execute a function on each array element
      *
+     * @param callable $callback
      * @return Array
      */
     public function map(callable $callback)
