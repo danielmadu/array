@@ -3,13 +3,14 @@
 namespace OL\Arr;
 
 use OL\Arr\Contracts\Arr as ArrContract;
+use OL\Arr\Control as Control;
 
-class Arr implements ArrContract
+class Arr extends Control implements ArrContract
 {
     /**
      * @var array Contents.
      */
-    protected $contents;
+    protected $contents = array();
 
     /**
      * Str constructor.
@@ -31,4 +32,5 @@ class Arr implements ArrContract
     {
         return new Arr(array_map($callback, $this->contents));
     }
+
 }

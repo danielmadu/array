@@ -2,7 +2,7 @@
 
 namespace OL\Arr\Contracts;
 
-interface Arr
+interface Arr extends \ArrayAccess
 {
     public function __construct(array $array);
 
