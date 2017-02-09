@@ -12,30 +12,20 @@ $array = new Arr([1,2,3]);
 print_r($array);
 
 /**
+ * Map test
+ */
+echo "\nMap test\n";
+$map = $array->map(function ($value) {
+  return $value + 1;
+});
+print_r($map);
+
+/**
  * Immutable object
  */
 echo "\nImmutable check\n";
-$array->map(function ($value) {
-  return $value + 1;
-});
 print_r($array);
 
-/**
- * New object returned
- */
-echo "\nMap test\n";
-$array2 = $array->map(function ($value) {
-  return $value + 1;
-});
-print_r($array2);
-
-/**
- * Control test
- */
-echo "\nExecuting the array_map function for control\n";
-print_r(array_map(function($value) {
-  return $value + 1;
-}, [1,2,3]));
 
 /**
  * Reduce test
