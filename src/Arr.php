@@ -26,11 +26,23 @@ class Arr extends Control implements ArrContract
      * Execute a function on each array element
      *
      * @param callable $callback
-     * @return Array
+     * @return Arr
      */
     public function map(callable $callback)
     {
         return new Arr(array_map($callback, $this->contents));
+    }
+
+    /**
+     * Reduce a array and return a value
+     *
+     * @param callable $callback
+     * @param (optional) mixed $initial
+     * @return Mixed
+     */
+    public function reduce(callable $callback, $initial = NULL)
+    {
+        return array_reduce($this->contents, $callback);
     }
 
 }
