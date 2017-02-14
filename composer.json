@@ -12,5 +12,13 @@
             "OL\\Arr\\": "src/"
         }
     },
-    "require": {}
+    "autoload-dev": {
+        "psr-4": {
+            "phpol\\Tests\\": "test/unit"
+        }
+    },
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    }
 }
