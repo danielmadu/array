@@ -1,11 +1,12 @@
 <?php
+namespace phpol\Test;
 
 use OL\Arr\Arr;
 
 /**
  *
  */
-class Generaltest extends PHPUnit_Framework_TestCase
+class Generaltest extends \PHPUnit_Framework_TestCase
 {
 
   public function testMapImmutable()
