@@ -2,10 +2,10 @@
 
 namespace OL\Arr;
 
-class Control {
-  /**
-     * Implements from ArrayAccess interface
-     */
+class Control implements \Iterator {
+    /**
+    * Implements from ArrayAccess interface
+    */
     public function offsetSet($offset, $value) {
         if (is_null($offset)) {
             $this->contents[] = $value;
@@ -24,6 +24,30 @@ class Control {
 
     public function offsetGet($offset) {
         return isset($this->contents[$offset]) ? $this->contents[$offset] : null;
+    }
+
+    /**
+     * Implements from Iterator interface
+     */
+
+    function rewind() {
+        $this->position = 0;
+    }
+
+    function current() {
+        return $this->array[$this->position];
+    }
+
+    function key() {
+        return $this->position;
+    }
+
+    function next() {
+        ++$this->position;
+    }
+
+    function valid() {
+        return isset($this->array[$this->position]);
     }
 
     /**

@@ -24,4 +24,13 @@ interface Arr extends \ArrayAccess
      * @return Mixed
      */
     public function reduce(callable $callback, $initial = NULL);
+
+    /**
+     * Filters elements of an array using a callback function
+     *
+     * @param callback $callback The callback function to use
+     *
+     * @return Arr
+     */
+    public function filter(callable $callback, $flag);
 }

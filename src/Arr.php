@@ -45,4 +45,16 @@ class Arr extends Control implements ArrContract
         return array_reduce($this->contents, $callback);
     }
 
+    /**
+     * Filters elements of an array using a callback function
+     *
+     * @param callable $callback
+     * @param (optional) int $flag
+     * @return Arr
+     */
+    public function filter(callable $callback, $flag = 0)
+    {
+        return new Arr(array_filter($this->contents, $callback, $flag));
+    }
+
 }
