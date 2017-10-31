@@ -1,5 +1,5 @@
-#Installation
-In your `composer.json` add the follow lines
+# Installation
+In your `composer.json` add the follow lines:
 
 	"repositories": [
 	        {
@@ -14,7 +14,7 @@ In your `composer.json` add the follow lines
 
 You can now install the dependency by running `composer install`
 
-#Usage
+# Usage
 
 	use OL\Arr\Arr;
 
